@@ -1,0 +1,102 @@
+{
+  "base_url": "https://api-gw-toc.zeekrlife.com",
+  "success_code": "000000",
+  "daily_task_label": "每日签到",
+  "completed_statuses": [
+    true,
+    1,
+    "1",
+    "true"
+  ],
+  "timezone_offset_hours": 8,
+  "timeout_seconds": 25,
+  "expiry_margin_seconds": 60,
+  "max_response_bytes": 2097152,
+  "seven_day_scene": "SIGN_CONTINUOUS_7_LOTTERY",
+  "seven_day_record": "zgreen_7day_activity",
+  "claim_type_endpoints": {
+    "ZEEKR_VALUE": "claim_integral",
+    "CARBON_VALUE": "claim_energy"
+  },
+  "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) zeekr_iOS_v5.0.7",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "zh-CN,zh-Hans;q=0.9",
+    "riskVersion": "1",
+    "X-CORS-ONEX97FB91F061405-prod": "1",
+    "app_code": "toc_h5_green_zeekrapp",
+    "Version": "2",
+    "app_type": "h5",
+    "risk_platform": "h5",
+    "Accept-Encoding": "gzip",
+    "x_ca_key": "H5-SIGN-SECRET-KEY",
+    "WorkspaceId": "prod",
+    "Referer": "https://activity-h5.zeekrlife.com/",
+    "Origin": "https://activity-h5.zeekrlife.com",
+    "platform_h5": "IOS",
+    "AppId": "ONEX97FB91F061405",
+    "Content-Type": "application/json"
+  },
+  "endpoints": {
+    "sign": "/zeekrlife-mp-val/toc/v1/zgreen/center",
+    "walk_data": "/zeekrlife-mp-val/v1/walkData/initDayWalkData",
+    "task_msg": "/zeekrlife-mp-mkt/open/v1/taskProgress/taskMsg",
+    "article_detail": "/zeekrlife-bbs-theme/v1/invitation/pub/detail",
+    "square_list": "/zeekrlife-bbs-theme/v1/invitation/pub/list",
+    "fabulous": "/zeekrlife-bbs-theme/v1/clicks/fabulous",
+    "claim_energy": "/zeekrlife-mp-val/v1/carEnergy/collectedAllEnergy",
+    "claim_seven_day": "/zeekrlife-mp-mkt/toc/v1/applyV2/apply",
+    "claim_integral": "/zeekrlife-mp-val/v1/carEnergy/collectIntegralZeekrBalls",
+    "uncollected": "/zeekrlife-mp-val/v1/carEnergy/getUncollectedBallsPageNew",
+    "claim_fragment": "/zeekrlife-mp-mkt/toc/v1/apply/batchApply"
+  },
+  "source_commit": "m20104600/zeekr-checkin@2b6c9ce96486dc400b314d759f93489be76d9fff",
+  "empty_reward_profile_fields": [
+    "accountId",
+    "headImage",
+    "nickname",
+    "totalVal",
+    "integralTotalVal"
+  ],
+  "balance_fields": [
+    "totalVal",
+    "integralTotalVal"
+  ],
+  "fragment_reward_type": "DEBRIS",
+  "fragment_source_fields": [
+    "eventCode",
+    "sourceId"
+  ],
+  "failure_message_fields": [
+    "msg",
+    "message",
+    "errorMsg",
+    "remark"
+  ],
+  "automation": {
+    "enabled": true,
+    "steps": null,
+    "steps_min": 10000,
+    "steps_max": 20000,
+    "read": true,
+    "like": true,
+    "carbon_goal_enabled": true,
+    "carbon_goal_grams": 2000,
+    "carbon_poll_seconds": 20,
+    "carbon_max_wait_seconds": 60,
+    "carbon_task_name": "减碳2000g",
+    "carbon_value_type": "CARBON_VALUE",
+    "like_max_pages": 3,
+    "like_page_size": 20,
+    "walk_source_type": 20,
+    "article_task_name": "阅读文章",
+    "like_task_name": "每周点赞帖子",
+    "article_id_marker": "acticleId",
+    "task_request": {
+      "activityRecord": "medal_compose_task_manage",
+      "optional": {
+        "fetchTaskTakeAndReachTimesInfo": true
+      }
+    }
+  }
+}

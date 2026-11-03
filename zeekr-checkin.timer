@@ -1,0 +1,12 @@
+[Unit]
+Description=Daily Zeekr check-in at Beijing 08:10 and reward catch-up at 08:20
+
+[Timer]
+OnCalendar=*-*-* 08:10:00 Asia/Shanghai
+OnCalendar=*-*-* 08:20:00 Asia/Shanghai
+Persistent=true
+AccuracySec=30s
+Unit=zeekr-checkin.service
+
+[Install]
+WantedBy=timers.target

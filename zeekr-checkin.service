@@ -1,0 +1,23 @@
+[Unit]
+Description=Personal Zeekr sign-in and reward verification
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+SuccessExitStatus=2
+User=zeekr-checkin
+Group=zeekr-checkin
+WorkingDirectory=/opt/zeekr-checkin
+ExecStart=/usr/bin/python3 -X utf8 /opt/zeekr-checkin/zeekr_checkin.py --credentials /etc/zeekr-checkin/credentials.json --claim --save-report /var/lib/zeekr-checkin/latest.json
+StateDirectory=zeekr-checkin
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+TimeoutStartSec=600
+
+[Install]
+WantedBy=multi-user.target
